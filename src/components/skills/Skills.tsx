@@ -8,6 +8,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import './Skills.css';
+import useInView from '../../hooks/useInView';
 
 const skills = [
   {
@@ -69,6 +70,7 @@ const skills = [
 ]
 
 export const Skills = () => {
+  const [imgRef, isInView] = useInView<HTMLImageElement>({ threshold: 0.1 });
   return (
     <section id='skills' className='skills-block'>
       <Container>
@@ -76,7 +78,14 @@ export const Skills = () => {
         <p>I am proficient in a wide range of technologies essential for modern web and mobile development.<br/> My core skills include:</p>
         <Row className='top-container'>
           <Col md={6}>
-            <img className='img-skills' src="./images/skills.webp" alt="skills" />
+            <div  className={`img-wrapper ${isInView ? 'animated-img' : ''}`}>
+              <img 
+                className='img-skills' 
+                src="./images/skills.webp" 
+                alt="skills" 
+                ref={imgRef}
+              />
+            </div>
           </Col>
           <Col md={6}>
             <Row className='top-container'>

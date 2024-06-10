@@ -1,0 +1,19 @@
+.about-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.description-container {
+  width: 70%;
+  padding-left: 0.5rem;
+}
+.description-container p {
+  color: #ababab;
+  text-align: center;
+}

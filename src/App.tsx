@@ -9,6 +9,7 @@ import { Languages } from './components/languages/Languages';
 import { About } from './components/about/About';
 import { Skills } from './components/skills/Skills';
 import { Projects } from './components/projects/Projects';
+import { Expirience } from './components/expirience/Expirience';
 
 function App() {
   const windowWidth = useWindowWidth();
@@ -35,6 +36,8 @@ function App() {
               <Skills />
               <div className='separator'></div>
               <Projects />
+              <div className='separator'></div>
+              <Expirience />
             </section>
           </Box>
         </Grid>

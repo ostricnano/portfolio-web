@@ -1,4 +1,4 @@
-import { Col, Container, Row, ProgressBar } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoSass } from "react-icons/io5";
@@ -9,6 +9,7 @@ import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import './Skills.css';
 import useInView from '../../hooks/useInView';
+import ProgressBar from '../progress-bar/ProgressBar';
 
 const skills = [
   {
@@ -97,10 +98,7 @@ export const Skills = () => {
                         {skill.icon}
                         <p>{skill.name}</p>
                       </div>
-                      <ProgressBar 
-                        now={skill.percentage} 
-                        label={`${skill.percentage}%`} 
-                      />
+                      <ProgressBar progress={skill.percentage}/>
                     </div>
                   </Col>
                 ))

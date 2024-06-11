@@ -22,11 +22,11 @@ const expirience = [
   },
   {
     id:3,
-    company: 'Onvo sites (remote)',
-    jobTitle: 'Frontend Developer',
-    date: '2023 - 2024',
-    description: 'As a Front-End Developer using React Native and Expo, I specialized in building reusable components to streamline development and maintain design consistency. I focused on refactoring code and fixing bugs to enhance performance. I followed best practices, including object-oriented programming, SOLID principles, and effectively utilized hooks and portals for advanced features. This ensured better code maintainability and significantly improved the user experience.',
-    stack: ['React', 'React Native', 'Typescript', 'Expo', 'Firebase', 'Styled Components', 'Git', 'Bitbucket', 'Figma', 'Slack']
+    company: 'Loustau Arquitectos',
+    jobTitle: 'Architect Construction Director',
+    date: '2022 - 2020',
+    description: 'As an Architect Construction Director, I supervised and coordinated all construction activities, ensuring quality and compliance with regulations. I worked closely with engineers, contractors, and clients, managing budgets and resolving on-site issues. My experience includes reviewing and approving plans, managing multidisciplinary teams, and ensuring projects were completed on time and within budget.',
+    stack: ['Microsoft Excel', 'Microsoft Project', 'Auto-cad', 'Archi-cad']
   },
 ]
 export const Expirience = () => {
@@ -65,11 +65,12 @@ export const Expirience = () => {
                 </div>
                 <div className={`work-description ${activeIndexes.includes(exp.id - 1) ? 'show' : ''}`}>
                   <p>{exp.jobTitle}</p>
-                  <p>{exp.description}</p>
+                  <p className='description-text'>{exp.description}</p>
                   <div className='work-stack'>
+                    <p>Tools and Technologies Utilized</p>
                     {
                       exp.stack.map((stack, index) => (
-                        <span key={index}>{stack}</span>
+                        <span key={index}>-{stack}</span>
                       ))
                     }
                   </div>

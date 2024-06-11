@@ -1,3 +1,64 @@
 .expirience-block {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.work-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #474747;
+}
+
+.work-block p{
+  margin: 0;
+}
+
+.work-header div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 150px;
+}
+.btn {
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+.work-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  max-height: 0; 
+  transition: all 2s ease;
+  padding: 0 0.75rem;
+}
+
+.work-description.show {
+  max-height: 700px;
+}
+.icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out;
+}
+.icon-rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
 }

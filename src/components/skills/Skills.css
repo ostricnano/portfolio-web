@@ -14,6 +14,9 @@
   flex-direction: column;
   margin-bottom: 2rem;
 }
+.skills-block p {
+  color: #ababab;
+}
 
 .top-container{
   margin-bottom: 1rem;

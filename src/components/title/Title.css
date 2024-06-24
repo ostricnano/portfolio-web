@@ -1,0 +1,26 @@
+/* Title.css */
+.title-holder {
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.title-holder h2 {
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.title-holder .subtitle {
+  color: #fff;
+}
+
+.title-holder .subtitle:before {
+  content: '-';
+  margin: 0 5px 0 0;
+}
+
+.title-holder .subtitle:after {
+  content: '-';
+  margin: 0 0 0 5px;
+}
+

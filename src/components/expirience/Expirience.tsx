@@ -41,7 +41,7 @@ export const Expirience = () => {
   };
 
   return (
-    <section className='expirience-block'>
+    <section id='expirience' className=' block expirience-block'>
       <h5 className="title">WORK EXPIRIENCE</h5>
       <Container>
           {

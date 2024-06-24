@@ -10,6 +10,7 @@ import { FaGithub } from "react-icons/fa";
 import './Skills.css';
 import useInView from '../../hooks/useInView';
 import ProgressBar from '../progress-bar/ProgressBar';
+import { Title } from '../title/Title';
 
 const skills = [
   {
@@ -73,10 +74,10 @@ const skills = [
 export const Skills = () => {
   const [imgRef, isInView] = useInView<HTMLImageElement>({ threshold: 0.1 });
   return (
-    <section id='skills' className='skills-block'>
+    <section id='skills' className='block skills-block'>
       <Container>
-        <h5 className="title">SKILSS</h5>
-        <p>I am proficient in a wide range of technologies essential for modern web and mobile development.<br/> My core skills include:</p>
+        <Title title='SKILLS' subtitle='Key skills that define my expertise in web development' />
+        {/* <p>I am proficient in a wide range of technologies essential for modern web and mobile development.<br/> My core skills include:</p> */}
         <Row className='top-container'>
           <Col md={6}>
             <div  className={`img-wrapper ${isInView ? 'animated-img' : ''}`}>

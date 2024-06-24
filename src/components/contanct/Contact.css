@@ -38,3 +38,10 @@
   text-align: center;
   color: #ababab;
 }
+.contact-info a {
+  text-decoration: none;
+}
+.contact-info p:hover {
+  color: #ababab;
+  cursor: pointer;
+}

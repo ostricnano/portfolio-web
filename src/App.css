@@ -21,10 +21,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  background: #000 !important;
+}
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 .container-fluid {
   margin: 0 auto;
   max-width: 1200px;
+}
+.block {
+  margin: 5rem 0;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e6e6e6;
 }
 .separator {
   margin: 1rem 0;
@@ -32,26 +42,14 @@ body {
   width: 90%;
 }
 
-.main-page {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 15px ;
-  min-height: calc(100vh - 32px);
-  max-height: calc(100vh - 32px);
-  margin: 16px 16px 16px 0;
-  overflow-y: auto;
-}
 
 .title {
   color: #fff;
-  font-size: 1.1rem;
-  font-weight: 300;
-  margin: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1.5rem;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 .title::before {
   content: "-";
@@ -60,4 +58,14 @@ body {
 .title::after {
   content: "-";
   margin-left: 0.5rem;
+}
+.progress-bar {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #ababab !important;
+  transform-origin: 0%;
+  z-index: 1000;
 }

@@ -1,48 +1,35 @@
-import './App.css'
-import { Contact } from './components/contanct/Contact';
-import { Education } from './components/education/Education';
-import { Header } from './components/navbar/Header';
-import { SideBar } from './components/sidebar/SideBar';
-import {  Box, Grid } from '@mui/material';
-import useWindowWidth from './hooks/useWindowWidth';
-import { Languages } from './components/languages/Languages';
-import { About } from './components/about/About';
 import { Skills } from './components/skills/Skills';
-import { Projects } from './components/projects/Projects';
+import { Projects } from './components/our-projects/Projects';
 import { Expirience } from './components/expirience/Expirience';
+import { Header } from './components/header/Header';
+import { ContactBlock } from './components/contact-info/ContactBlock';
+import { Hero } from './components/main/Hero';
+import { motion, useScroll, useSpring } from "framer-motion"
+import './App.css'
+import { Services } from './components/our-services/Services';
 
 function App() {
-  const windowWidth = useWindowWidth();
-
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
   return (
-    <Box sx={{height:'100vh', background:'#000'}} >
-      <Grid container columnSpacing={1}>
-        {
-          windowWidth > 1224 &&           
-            <Grid item xs={3}  >
-              <SideBar>
-                <Contact />
-                <Education />
-                <Languages />
-              </SideBar>
-            </Grid>
-        }
-        <Grid item xs={windowWidth > 1224 ? 9 : 12} >
-          <Box >
-            <section className='main-page'>
-              <Header />
-              <About />
-              <div className='separator'></div>
-              <Skills />
-              <div className='separator'></div>
-              <Projects />
-              <div className='separator'></div>
-              <Expirience />
-            </section>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+    <>
+      <motion.div className="progress-bar" style={{ scaleX }} />
+      <div>
+        <Header/>
+        <main>
+          <Hero />
+          <Expirience/>
+          <Projects />
+          <Services />
+          <Skills />
+          <ContactBlock />
+        </main>
+      </div>
+    </>
   )
 }
 

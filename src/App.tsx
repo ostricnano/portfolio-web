@@ -7,6 +7,7 @@ import { Hero } from './components/main/Hero';
 import { motion, useScroll, useSpring } from "framer-motion"
 import './App.css'
 import { Services } from './components/our-services/Services';
+import { Footer } from './components/footer/Footer';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -28,6 +29,9 @@ function App() {
           <Expirience/>
           <ContactBlock />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   )

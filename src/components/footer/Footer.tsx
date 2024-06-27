@@ -4,10 +4,29 @@ import { FaPhone } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 import './Footer.css'
+import { useEffect, useState } from 'react';
 
 export const Footer = () => {
+  const [showTopBtn, setShowTopBtn] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll',()=>{
+      if (window.scrollY > 400) {
+        setShowTopBtn(true)
+      } else {
+        setShowTopBtn(false)
+      }
+    })
+  })
+
+  const goTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
   return (
-    <section className='footer'>
+    <footer className='footer'>
       <Container>
         <Row className='footer-row'>
           <Col md={6}>
@@ -66,6 +85,16 @@ export const Footer = () => {
       <div className='rights'>
         <p className='footer-text'>© 2021 Mariano Ostric. All Rights Reserved.</p>
       </div>
-    </section>
+      {
+        showTopBtn && (
+          <div 
+            className="go-top" 
+            data-testid='scroll-button' 
+            onClick={goTop}
+          >
+          </div>
+        )
+      }
+    </footer>
   )
 }

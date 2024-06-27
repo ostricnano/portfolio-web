@@ -1,8 +1,9 @@
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { IoLogoVercel } from "react-icons/io5";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io5";
 import './Hero.css'
+import { About } from '../about/About';
 
 const socials = [
   {
@@ -20,40 +21,39 @@ const socials = [
 ]
 export const Hero = () => {
   return (
-    <section className='block hero-block'>
-      <Container>
-        <Row>
-          <Col md={6} className='header-block'>
-            <h1 className='hero-title'>Frontend Developer</h1>
-            <h2 className='hero-subtitle'>React.js | React native</h2>
-            <p className='hero-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
-            <div className='btn-container'>
-              <Button className='ps-5 pe-5' variant="outline-secondary ">
-                <a href='#contact-me'>Contact me</a>
-              </Button>
-              <Button className='ps-5 pe-5'  variant="outline-secondary">
-                <a href='#projects'>View my jobs</a>
-              </Button>
-            </div>
-            <div className='socials-container'> 
-              {
-                socials.map((social, index) => (
-                  <li className='list-item' key={index}>
-                    <a href={social.url} target="_blank">
-                      {social.icon}
-                    </a>
-                  </li>
-                ))
-              }
-            </div>
-          </Col>
-          <Col md={6} >
-            <div className='img-container'>
-              <img src='./images/hero-bg02.png' alt='profile-picture' className='profile-picture'/>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+    <section id='about' className='hero-block'>
+      <div className='bg-container'>
+        <img className='hero-image' src='/images/hero-bg.jpg' alt='hero-image' />
+      </div>
+      <div className='header-block' >
+        <h1 className='hero-title'>Front-end <span>Developer</span></h1>
+        <div className='description-container'>
+          <h2 className='hero-subtitle'>React.js | React native</h2>
+          <p className='hero-description'>
+            I specialize in building dynamic and responsive web and mobile applications using React.js and React Native. My focus is on creating visually appealing and highly functional user interfaces that provide a seamless experience across all devices.
+          </p>
+          <div className='btn-container'>
+            <Button className='ps-5 pe-5' variant="outline-secondary ">
+              <a href='#contact-me'>Contact me</a>
+            </Button>
+            <Button className='ps-5 pe-5'  variant="outline-secondary">
+              <a href='#projects'>View my jobs</a>
+            </Button>
+          </div>
+          <div className='socials-container'> 
+            {
+              socials.map((social, index) => (
+                <li className='list-item' key={index}>
+                  <a href={social.url} target="_blank">
+                    {social.icon}
+                  </a>
+                </li>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <About />
     </section>
   )
 }

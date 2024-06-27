@@ -2,7 +2,7 @@ import './Title.css'
 
 interface TitleProps {
   title: string,
-  subtitle: string
+  subtitle?: string
 }
 
 export const Title: React.FC<TitleProps> = ({

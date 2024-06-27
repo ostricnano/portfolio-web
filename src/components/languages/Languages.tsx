@@ -3,7 +3,7 @@ import './Languages.css';
 export const Languages = () => {
   return (
     <section className='languages-block'>
-      <h5 className="title">LANGUAGES</h5>
+      <h5 className="title-secondary">LANGUAGES</h5>
       <div className='language-container'>
         <p className='text'>English - <span className='text-level'>Advanced</span></p>
       </div>

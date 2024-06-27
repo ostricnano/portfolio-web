@@ -5,7 +5,7 @@ import { ContactInfo } from "./ContactInfo"
 
 export const ContactBlock = () => {
   return (
-    <section id='contact-me'>
+    <section id='contact-me' className="block contact-block">
       <Title title='Contact-us' subtitle='get connected with us' />
       <Container >
         <Row>

@@ -1,5 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import './Projects.css';
+import { Title } from '../title/Title';
 
 const projects = [
   {
@@ -53,8 +54,8 @@ const projects = [
 ]
 export const Projects = () => {
   return (
-    <section id='projects' className='projects-block'>
-      <h5 className="title">PROJECTS</h5>
+    <section id='projects' className='block projects-block'>
+      <Title title='PROJECTS' subtitle='Some of my recent works' />
       <Container fluid>
         <Row>
           {

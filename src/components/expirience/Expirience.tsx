@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { IoIosArrowDropdown } from "react-icons/io";
 import './Expirience.css';
+import { Title } from '../title/Title';
 
 const expirience = [
   {
@@ -42,7 +43,7 @@ export const Expirience = () => {
 
   return (
     <section id='expirience' className=' block expirience-block'>
-      <h5 className="title">WORK EXPIRIENCE</h5>
+      <Title title='EXPERIENCE' subtitle='Professional Journey and Achievements' />
       <Container>
           {
             expirience.map((exp) => (

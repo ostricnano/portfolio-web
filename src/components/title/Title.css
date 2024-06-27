@@ -1,17 +1,17 @@
 /* Title.css */
 .title-holder {
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 
 .title-holder h2 {
-  margin: 0 0 5px;
+  margin: 0 0 12px;
   text-transform: uppercase;
-  color: #fff;
+  color: #333;
 }
 
 .title-holder .subtitle {
-  color: #fff;
+  color: #ababab;
 }
 
 .title-holder .subtitle:before {

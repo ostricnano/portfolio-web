@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   height: 100%;
-  background-color: #000;
 }
 .contact-info {
   display: flex;
@@ -10,12 +9,14 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
+  border-bottom: 1px solid #E09145;
+  padding-bottom: 1rem;
+  width: 90%;
 }
 .icon{
   color: #fff;
 }
 .contact-info a{
-  color: #fff;
   text-decoration: none;
 }
 .text{
@@ -26,6 +27,7 @@
 }
 .separator{
   width: 80%;
-  height: 1px;
-  color: #fff;
+  height: 2px;
+  background: #E09145;
+  border: none;
 }

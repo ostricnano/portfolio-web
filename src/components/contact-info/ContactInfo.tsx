@@ -11,17 +11,14 @@ const contactInfo = [
   {
     icon: <FaPhone size={50} />,
     text: '(+54) 9 11 6523-4000',
-    url: ''
   },
   {
     icon: <IoMail size={50} />,
     text: 'ostricmariano@gmail.com',
-    url: ''
   },
   {
     icon: <IoLocation size={50} />,
     text: 'Buenos Aires, Argentina',
-    url: ''
   },
   {
     icon: <IoLogoLinkedin size={50} />,
@@ -46,8 +43,8 @@ export const ContactInfo = () => {
         <Row>
             {
               contactInfo.map((info, index) => (
-                <Col md={6}>
-                  <div key={index} className='contact-info'>
+                <Col md={6} key={index}>
+                  <div  className='contact-info'>
                     <div className='icon'>
                       {info.icon}
                     </div>
@@ -55,7 +52,6 @@ export const ContactInfo = () => {
                       <p className='text'>{info.text}</p>
                     </a>
                   </div>
-                  <div className='separator'/>
                 </Col>
               ))
             }

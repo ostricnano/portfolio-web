@@ -3,7 +3,7 @@ import { IoLogoVercel } from "react-icons/io5";
 
 export const Contact = () => {
   return (
-    <section className="contact-block">
+    <section className="about-block">
       <div className="image-container">
         <img className="image" src="./images/profile-picture.png"  />
       </div>

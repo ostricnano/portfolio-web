@@ -19,13 +19,13 @@
 }
 #header .navbar-brand {
   color: #ababab;
-  text-transform: uppercase;
   font-weight: 600;
   height: auto;
   padding: 0;
   font-size: 22px;
   line-height: 1.6;
 }
+
 #header .navbar-collapse {
   flex-grow: 0;
 }
@@ -40,7 +40,7 @@
 }
 
 #header .navbar-collapse a {
-  color: #4d4d4d;
+  color: #C3C8D3;
   position: relative;
 }
 
@@ -60,7 +60,7 @@
 
 #header .navbar-collapse a:before {
   content: '';
-  background: #ababab;
+  background: #E09145;
   height: 1px;
   position: absolute;
   bottom: 7px;

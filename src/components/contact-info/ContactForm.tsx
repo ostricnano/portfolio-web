@@ -8,9 +8,6 @@ import './ContactForm.css';
 interface FormValues {
   firstName: string;
   lastName: string;
-  city: string;
-  state: string;
-  code: string;
   message: string;
 }
 
@@ -25,9 +22,6 @@ export const ContactForm = () => {
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Requirede'),
-    city: Yup.string().required('City is required'),
-    state: Yup.string().required('State is required'),
-    code: Yup.string().required('Code is required'),
     message: Yup.string().required('Message is required')
   });
 
@@ -48,9 +42,6 @@ export const ContactForm = () => {
         initialValues={{
           firstName: '',
           lastName: '',
-          city: '',
-          state: '',
-          code: '',
           message: '',
         }}
         validationSchema={schema}
@@ -91,61 +82,6 @@ export const ContactForm = () => {
                 />
                 <Form.Control.Feedback type="invalid">
                   {errors.lastName}
-                </Form.Control.Feedback>
-              </Form.Group>
-            </Row>
-            <Row className="mb-4">
-              <Form.Group 
-                as={Col} 
-                md="6" 
-                controlId="validationFormik103"
-                className="position-relative"
-              >
-                <Form.Label>City</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  placeholder="City" 
-                  name='city'
-                  value={values.city}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  isValid={touched.city && !errors.city}
-                  isInvalid={touched.city && !!errors.city}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {errors.city}
-                </Form.Control.Feedback>
-              </Form.Group>
-              <Form.Group as={Col} md="3" controlId="validationCustom04">
-                <Form.Label>State</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  placeholder="State" 
-                  name='state'
-                  value={values.state}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  isValid={touched.state && !errors.state}
-                  isInvalid={touched.state && !!errors.state}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {errors.state}
-                </Form.Control.Feedback>
-              </Form.Group>
-              <Form.Group as={Col} md="3" controlId="validationCustom05">
-                <Form.Label>Zip code</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  placeholder="Zip Code" 
-                  name='code'
-                  value={values.code}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  isValid={touched.code && !errors.code}
-                  isInvalid={touched.code && !!errors.code}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {errors.code}
                 </Form.Control.Feedback>
               </Form.Group>
             </Row>

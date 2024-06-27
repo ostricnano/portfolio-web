@@ -35,7 +35,6 @@ const contactInfo = [
     text: 'ostricnano-projects',
     url: 'https://vercel.com/ostricnanos-projects'
   }
-  
 ]
 export const ContactInfo = () => {
   return (

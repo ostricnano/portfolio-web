@@ -6,6 +6,7 @@ import { ContactBlock } from './components/contact-info/ContactBlock';
 import { Hero } from './components/main/Hero';
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Services } from './components/our-services/Services';
+import { Footer } from './components/footer/Footer';
 import './App.css'
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
           <Expirience/>
           <ContactBlock />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   )

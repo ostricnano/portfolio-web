@@ -5,9 +5,9 @@ import { Header } from './components/header/Header';
 import { ContactBlock } from './components/contact-info/ContactBlock';
 import { Hero } from './components/main/Hero';
 import { motion, useScroll, useSpring } from "framer-motion"
-import './App.css'
 import { Services } from './components/our-services/Services';
 import { Footer } from './components/footer/Footer';
+import './App.css'
 
 function App() {
   const { scrollYProgress } = useScroll();

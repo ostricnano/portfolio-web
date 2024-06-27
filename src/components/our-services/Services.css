@@ -11,9 +11,12 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem 0.5rem;
-  border-radius: 12px;
+  border-radius: 30px;
   margin-top: 2rem;
-  background: #161616;
+  background: linear-gradient(315deg, #111111, #141414);
+  box-shadow:  
+    -5px -5px 10px #101010,
+    5px 5px 10px #161616;
   min-height: 370px;
 }
 .service-icon {
@@ -38,6 +41,6 @@
   padding-bottom: 0.5rem;
 }
 .service p{
-  color: #333;
+  color: #ababab;
   text-align: center;
 }

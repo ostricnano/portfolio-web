@@ -14,6 +14,7 @@ export const Title: React.FC<TitleProps> = ({
   const [ref, isInView, hasAnimated] = useInView<HTMLHeadingElement | HTMLDivElement>({
     threshold: 0.1  // Ajusta el umbral según sea necesario
   });
+  console.log('isInView', isInView)
   return (
       <div 
         className='title-holder'

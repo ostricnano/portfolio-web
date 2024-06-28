@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import { Title } from "../title/Title"
 import { ContactForm } from "./ContactForm"
 import { ContactInfo } from "./ContactInfo"
+import './ContactBlock.css'
 
 export const ContactBlock = () => {
   return (
@@ -9,10 +10,10 @@ export const ContactBlock = () => {
       <Title title='Contact-us' subtitle='get connected with us' />
       <Container >
         <Row>
-          <Col md={6}>
+          <Col sx={6}>
             <ContactInfo />
           </Col>
-          <Col md={6}>
+          <Col sx={6}>
             <ContactForm />
           </Col>
         </Row>

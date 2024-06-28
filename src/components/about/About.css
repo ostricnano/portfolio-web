@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -2rem;
+  margin-top: -3rem;
 }
 
 .avatar-container{
@@ -31,8 +31,21 @@
   width: 50%;
   margin: 0 auto;
 }
-.description p{
+.description p {
   color: #ababab;
+  animation-name: animationText;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+@keyframes animationText {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @media screen and (max-width: 768px) {
   .description {

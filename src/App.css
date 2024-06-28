@@ -42,23 +42,6 @@ a {
   width: 90%;
 }
 
-
-.title {
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 1.5rem;
-  text-align: center;
-  letter-spacing: 3px;
-}
-.title::before {
-  content: "-";
-  margin-right: 0.5rem;
-}
-.title::after {
-  content: "-";
-  margin-left: 0.5rem;
-}
 .progress-bar {
   position: fixed;
   top: 65px;

@@ -4,22 +4,26 @@
   margin: 0 0 20px;
 }
 
-.title-holder h2 {
-  margin: 0 0 12px;
+.title {
+  font-size: 2rem;
+  margin: 0 0 8px;
   text-transform: uppercase;
-  color: #333;
+  color: #636161;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
-.title-holder .subtitle {
+.subtitle {
   color: #ababab;
+  letter-spacing: 1px;
 }
 
-.title-holder .subtitle:before {
+.subtitle:before {
   content: '-';
   margin: 0 5px 0 0;
 }
 
-.title-holder .subtitle:after {
+.subtitle:after {
   content: '-';
   margin: 0 0 0 5px;
 }

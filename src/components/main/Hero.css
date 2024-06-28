@@ -83,12 +83,9 @@
   color: #ababab;
 }
 
-.btn-container a{
+.btn-container a {
   text-decoration: none;
   color:#ababab;
-}
-.btn{
-  background-color: red;
 }
 .socials-container {
   display: flex;
@@ -117,5 +114,31 @@
   .header-block {
     width: 75%;
   }
-  
+}
+@media screen and (max-width: 768px) {
+  .bg-container{
+    height: 90vh;
+  }
+  .header-block {
+    width: 88%;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-container .btn {
+    width: 100%;
+  } 
 }

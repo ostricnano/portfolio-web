@@ -30,14 +30,14 @@ export const Footer = () => {
       <Container>
         <Row className='footer-row'>
           <Col md={6}>
-          <div className='footer-description'>
-            <div className='avatar-container-footer'>
-              <img src='./images/profile-picture02.png' alt='profile' className='profile-img-footer' />
+            <div className='footer-description'>
+              <div className='avatar-container-footer'>
+                <img src='./images/profile-picture02.png' alt='profile' className='profile-img-footer' />
+              </div>
+              <p>Passionate web developer specializing in creating responsive and interactive web applications. Skilled in HTML, CSS, Sass, JavaScript, and React Native. Dedicated to delivering high-quality code and user-friendly designs. Let's work together to bring your ideas to life!</p>
             </div>
-            <p>Passionate web developer specializing in creating responsive and interactive web applications. Skilled in HTML, CSS, Sass, JavaScript, and React Native. Dedicated to delivering high-quality code and user-friendly designs. Let's work together to bring your ideas to life!</p>
-          </div>
           </Col>
-          <Col md={3}>
+          <Col md={2}>
             <div className='list-items'>
               <ul>
                 <h4>About</h4>
@@ -49,7 +49,7 @@ export const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col md={3}>
+          <Col md={4}>
             <div className='list-items'>
               <ul>
                 <h4>Contact Me</h4>

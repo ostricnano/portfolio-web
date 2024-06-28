@@ -34,3 +34,8 @@
 .description p{
   color: #ababab;
 }
+@media screen and (max-width: 768px) {
+  .description {
+    width: 80%;
+  }
+}

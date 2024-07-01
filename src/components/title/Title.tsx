@@ -1,5 +1,4 @@
 import useInView from '../../hooks/useInView';
-import { motion } from "framer-motion";
 import './Title.css'
 
 interface TitleProps {
@@ -19,32 +18,18 @@ export const Title: React.FC<TitleProps> = ({
       <div 
         className='title-holder'
       >
-        <motion.h2
-          className='title'
+        <h2
           ref={ref}
-          initial={{ translateX: '-100px', opacity: 0}}
-          animate={ hasAnimated  ? { translateX: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 2,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01]
-          }}
+          className={`title ${hasAnimated  ? 'title-animated' : ''}`}
         >
           {title}
-        </motion.h2>
-        <motion.div 
-          className='subtitle'
+        </h2>
+        <div 
+          className={`subtitle ${hasAnimated  ? 'subtitle-animated' : ''}`}
           ref={ref}
-          initial={{ translateX: '100px', opacity: 0}}
-          animate={ hasAnimated  ? { translateX: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 2,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01]
-          }}
         >
           {subtitle}
-        </motion.div>
+        </div>
       </div>
   )
 }

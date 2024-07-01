@@ -1,10 +1,5 @@
-import { Col, Container, Row } from 'react-bootstrap'
-import { IoMail } from "react-icons/io5";
-import { FaPhone } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5";
-import { IoLogoLinkedin } from "react-icons/io5";
-import './Footer.css'
 import { useEffect, useState } from 'react';
+import './Footer.css'
 
 export const Footer = () => {
   const [showTopBtn, setShowTopBtn] = useState(false)
@@ -27,7 +22,7 @@ export const Footer = () => {
   }
   return (
     <footer className='footer'>
-      <Container>
+      {/* <Container>
         <Row className='footer-row'>
           <Col md={6}>
             <div className='footer-description'>
@@ -81,7 +76,7 @@ export const Footer = () => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
       <div className='rights'>
         <p className='footer-text'>© 2021 Mariano Ostric. All Rights Reserved.</p>
       </div>

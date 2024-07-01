@@ -11,11 +11,23 @@
   color: #636161;
   letter-spacing: 1px;
   font-weight: 700;
+  opacity: 0;
+}
+.title-animated {
+  animation-name: titleAnimation;
+  animation-duration: 3s;
+  transition: all 0.3s;
+  opacity: 1;
 }
 
 .subtitle {
   color: #ababab;
   letter-spacing: 1px;
+}
+.subtitle-animated {
+  animation-name: subtitleAnimation;
+  animation-duration: 3s;
+  transition: all 0.3s;
 }
 
 .subtitle:before {
@@ -26,5 +38,26 @@
 .subtitle:after {
   content: '-';
   margin: 0 0 0 5px;
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes subtitleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 

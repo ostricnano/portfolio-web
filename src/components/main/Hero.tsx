@@ -4,6 +4,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io5";
 import './Hero.css'
 import { About } from '../about/About';
+import useInView from '../../hooks/useInView';
 
 const socials = [
   {
@@ -20,12 +21,19 @@ const socials = [
   }
 ]
 export const Hero = () => {
+  const [ref, isInView, hasAnimated] = useInView<HTMLHeadingElement | HTMLDivElement>({
+    threshold: 0.1  // Ajusta el umbral según sea necesario
+  });
+  
   return (
     <section id='about' className='hero-block'>
       <div className='bg-container'>
         <img className='hero-image' src='/images/hero-bg.jpg' alt='hero-image' />
       </div>
-      <div className='header-block' >
+      <div 
+        className={`header-block ${hasAnimated  ? 'header-block-animated' : ''}`} 
+        ref={ref}
+      >
         <h1 className='hero-title'>Front-end <span>Developer</span></h1>
         <div className='description-container'>
           <h2 className='hero-subtitle'>React.js | React native</h2>

@@ -24,6 +24,7 @@ export const Hero = () => {
   const [ref, isInView, hasAnimated] = useInView<HTMLHeadingElement | HTMLDivElement>({
     threshold: 0.1  // Ajusta el umbral según sea necesario
   });
+  console.log(isInView)
   
   return (
     <section id='about' className='hero-block'>

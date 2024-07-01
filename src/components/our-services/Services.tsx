@@ -43,14 +43,13 @@ export const Services = () => {
                   <motion.div 
                     className='service'
                     ref={ref}  // Añade la referencia al contenedor
-                    initial={{ opacity: 0.5, scale: 0.6 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}  // Inicia la animación solo si está en vista
                     transition={{
                       duration: 2,
-                      delay: 0.8,
+                      delay: 1,
                       ease: [0, 0.71, 0.2, 1.01]
                     }}
-                    
                   >
                     <div className='service-icon'>
                       <img src={service.icon} alt={service.title} />

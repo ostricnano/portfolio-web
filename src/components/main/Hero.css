@@ -47,9 +47,12 @@
   padding-left: 0.5rem;
   z-index: 2;
   width: 40%;
+  opacity: 0;
+}
+.header-block-animated {
   animation-name: headerAnimation;
-  animation-delay: 1s;
   animation-duration: 3s;
+  opacity: 1;
 }
 .hero-title{
   font-size: 3rem;

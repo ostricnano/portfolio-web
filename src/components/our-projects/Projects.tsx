@@ -10,6 +10,7 @@ const projects = [
     stack: ['React.js', 'Styled components', 'Git & Github', 'Vercel deploy'],
     image: './images/ecoWave.jpg',
     url: 'https://ecowaveus.com/',
+    repoLink: 'https://github.com/ostricnano/ecowaveus'
   },
   {
     id: 2,
@@ -18,14 +19,16 @@ const projects = [
     stack: ['React.js', 'React bootstrap', 'Git & Github','Vitest',' React testing library','Vercel deploy'],
     image: './images/arquitect.jpg',
     url: 'https://arquitect-page.vercel.app/',
+    repoLink: 'https://github.com/ostricnano/Arquitect-Page'
   },
   {
     id: 3,
     name: 'Corporet Page',
     description: 'A landing page for a company who wants to show their services, temas, works, contact forms and others funcionalities.',
-    stack: ['React.js', 'React bootstrap', 'Git & Github','Vitest',' React testing library','Vercel deploy'],
+    stack: ['React.js', 'React bootstrap', 'Git & Github','Vitest',' React testing library'],
     image: './images/corporet.jpg',
     url: 'https://corporet-page.vercel.app/',
+    repoLink: 'https://github.com/ostricnano/ecowaveus'
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const projects = [
     stack: ['ReactNative.js', 'Expo', 'Git & Github','styled components' ,'Deploy in App Store and Google Play Store'],
     image: './images/comunicaciones.png',
     url: 'https://apps.apple.com/gt/app/crema-app-oficial/id6470518256',
+    repoLink: 'https://github.com/ostricnano/ecowaveus'
   },
   {
     id: 5,
@@ -42,6 +46,8 @@ const projects = [
     stack: ['ReactNative.js', 'Expo', 'Git & Github','Css' ,'Vercel deploy'],
     image: './images/spotify.jpg',
     url: 'https://apps.apple.com/gt/app/crema-app-oficial/id6470518256',
+    repoLink: 'https://github.com/ostricnano/ecowaveus'
+
   },
   {
     id: 6,
@@ -49,7 +55,8 @@ const projects = [
     description: 'On line eccomerce made with next.js and shoppyfy.',
     stack: ['Next.js', 'Shoppyfy','Git & Github','Sass' ,'Vercel Deploy'],
     image: './images/futureWorld.png',
-    url: 'https://apps.apple.com/gt/app/crema-app-oficial/id6470518256',
+    url: 'https://nextjs-store-eta.vercel.app/',
+    repoLink: 'https://github.com/ostricnano/nextjs-store'
   },
 ]
 export const Projects = () => {
@@ -61,21 +68,23 @@ export const Projects = () => {
           {
             projects.map((project) => (
               <Col sm={4} key={project.id}>
-                <a href={project.url} target="_blank">
-                  <div className='container-project'>
-                    <img className='img-projects' src={project.image} alt="projects" />
-                    <div className='overlay-description'>
-                      <h5>{project.name}</h5>
-                      <p>{project.description}</p>
-                      <h5>Stack</h5>
-                      {
-                        project.stack.map((stack, index) => (
-                          <li key={index}>{stack}</li>
-                        ))
-                      }
+                <div className='container-project'>
+                  <img className='img-projects' src={project.image} alt="projects" />
+                  <div className='overlay-description'>
+                    <h5>{project.name}</h5>
+                    <p>{project.description}</p>
+                    <h5>Stack</h5>
+                    {
+                      project.stack.map((stack, index) => (
+                        <li key={index}>{stack}</li>
+                      ))
+                    }
+                    <div className='btn-wrapper'>
+                      <a href={project.url} target='blank'>Live link</a>
+                      <a href={project.repoLink} target='blank'>Github Repo</a>
                     </div>
                   </div>
-                </a>
+                </div>
               </Col>
             ))
           }

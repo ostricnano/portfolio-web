@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Footer.css'
+import WhatsAppBtn from '../whatsAppButton/WhatsAppBtn';
 
 export const Footer = () => {
   const [showTopBtn, setShowTopBtn] = useState(false)
@@ -90,6 +91,7 @@ export const Footer = () => {
           </div>
         )
       }
+      <WhatsAppBtn />
     </footer>
   )
 }

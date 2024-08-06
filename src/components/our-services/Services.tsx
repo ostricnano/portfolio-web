@@ -3,28 +3,8 @@ import { Title } from '../title/Title';
 import useInView from '../../hooks/useInView';
 import { motion } from "framer-motion";
 import './Services.css';
+import { services } from '../../constants';
 
-
-const services = [
-  {
-    id: 1,
-    icon: './images/ui-ux-icon.webp',
-    title: 'Ui/UX design',
-    description: 'I create intuitive and engaging user experiences with a focus on user-centric design. My interfaces are visually appealing, easy to navigate, and provide seamless interactions.',
-  },
-  {
-    id: 2,
-    icon: './images/web-icon.webp',
-    title: 'Web Development',
-    description: "I build responsive, dynamic websites using the latest technologies. From simple landing pages to complex web applications, I ensure optimal performance, scalability, and accessibility.",
-  },
-  {
-    id: 2,
-    icon: './images/mobile-icon.webp',
-    title: 'Mobile Development',
-    description: 'I develop robust mobile apps for iOS and Android using modern frameworks and best practices, ensuring smooth performance and a great user experience tailored to your needs.',
-  },
-]
 
 export const Services = () => {
   const [ref, isInView ] = useInView<HTMLDivElement>({
@@ -37,9 +17,9 @@ export const Services = () => {
       <Container>
         <Row>
           {
-            services.map((service, index) => {
+            services.map((service) => {
               return (
-                <Col key={index} md={4}>
+                <Col key={service.id} md={4}>
                   <motion.div 
                     className='service'
                     ref={ref}  // Añade la referencia al contenedor

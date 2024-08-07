@@ -13,17 +13,17 @@ export const workExperience = [
     id:2,
     company: 'Onvo sites (remote)',
     jobTitle: 'Frontend Developer',
-    date: '2023 - 2024',
+    date: '2022 - 2023',
     description: 'As a Front-End Developer using React Native and Expo, I specialized in building reusable components to streamline development and maintain design consistency. I focused on refactoring code and fixing bugs to enhance performance. I followed best practices, including object-oriented programming, SOLID principles, and effectively utilized hooks and portals for advanced features. This ensured better code maintainability and significantly improved the user experience.',
     stack: ['React', 'React Native', 'Typescript', 'Expo', 'Firebase', 'Styled Components', 'Git', 'Bitbucket', 'Figma', 'Slack']
   },
   {
     id:3,
-    company: 'Loustau Arquitectos',
-    jobTitle: 'Architect Construction Director',
-    date: '2022 - 2020',
-    description: 'As an Architect Construction Director, I supervised and coordinated all construction activities, ensuring quality and compliance with regulations. I worked closely with engineers, contractors, and clients, managing budgets and resolving on-site issues. My experience includes reviewing and approving plans, managing multidisciplinary teams, and ensuring projects were completed on time and within budget.',
-    stack: ['Microsoft Excel', 'Microsoft Project', 'Auto-cad', 'Archi-cad']
+    company: 'Betec (remote)',
+    jobTitle: 'Front End Developer',
+    date: '2019 - 2021',
+    description: 'Developed and maintained user interfaces using HTML, CSS, and JavaScript. Translate figma designs into code. Collaborated with the design team to create a seamless user experience. Implemented responsive design to ensure compatibility with various devices. Utilized Git and Github for version control and code collaboration. Participated in daily stand-ups and sprint planning meetings to ensure project milestones were met. Conducted code reviews to ensure code quality and adherence to best practices.',
+    stack: ['HTML', 'CSS', 'Javascript','React', 'Git', 'Github', 'Figma', 'Trello', 'Discord']
   },
 ]
 /* PROJECTS */

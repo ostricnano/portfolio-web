@@ -2,8 +2,11 @@ import { Button, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 import { Formik, FormikHelpers } from "formik";
 
+
 import * as Yup from 'yup';
 import './ContactForm.css';
+import { useState } from "react";
+import ModalSucces from "../modals/ModalSucces";
 
 interface FormValues {
   firstName: string;
@@ -11,7 +14,9 @@ interface FormValues {
   message: string;
 }
 
+
 export const ContactForm = () => {
+  const [ showModal, setShowModal ] = useState(false);
 
   const schema = Yup.object().shape({
     firstName: Yup.string()
@@ -21,22 +26,22 @@ export const ContactForm = () => {
     lastName: Yup.string()
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
-      .required('Requirede'),
+      .required('Required'),
     message: Yup.string().required('Message is required')
   });
 
   const handleSubmitForm = (
     values: FormValues,
-    { setSubmitting, resetForm }: FormikHelpers<FormValues>
+    { resetForm }: FormikHelpers<FormValues>
   ) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-      resetForm(); // Resetea el formulario después de enviarlo
-    }, 500);
+    if(values.firstName && values.lastName && values.message) {
+      setShowModal(true);
+      resetForm();
+    }
   }
 
   return (
+    <>
     <Row>
       <Formik
         initialValues={{
@@ -111,5 +116,14 @@ export const ContactForm = () => {
         )}
       </Formik>
     </Row>
+    {
+      showModal && (
+        <ModalSucces 
+          show={showModal}
+          handleClose={() => setShowModal(false)}
+        />
+      )
+    }
+    </>
   )
 }

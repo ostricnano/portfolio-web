@@ -20,6 +20,7 @@ const socials = [
     url: 'https://vercel.com/ostricnanos-projects'
   }
 ]
+
 export const Hero = () => {
   const [ref, isInView, hasAnimated] = useInView<HTMLHeadingElement | HTMLDivElement>({
     threshold: 0.1  // Ajusta el umbral según sea necesario

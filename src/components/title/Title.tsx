@@ -1,10 +1,7 @@
 import useInView from '../../hooks/useInView';
+import { TitleProps } from '../../types';
 import './Title.css'
 
-interface TitleProps {
-  title: string,
-  subtitle?: string
-}
 
 export const Title: React.FC<TitleProps> = ({
   title,

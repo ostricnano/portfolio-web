@@ -2,6 +2,7 @@
     text-align: center;
     justify-content: center;
     width: 100%;
+    position: relative;
 }
 .footer-row {
   padding: 3rem 0;
@@ -73,7 +74,7 @@
   padding: 2rem 0;
   border-top: 1px solid #ababab;
 }
-.rights p{
+.rights p {
   margin: 0;
   color: #E09145;
 }

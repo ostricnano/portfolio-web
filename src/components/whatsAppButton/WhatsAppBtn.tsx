@@ -1,26 +1,19 @@
-
+import { FaWhatsapp } from "react-icons/fa6";
+import './WhatsAppBtn.css';
 const WhatsAppBtn = () => {
   const phoneNumber = "+5491165234000";
-  const message = "Hola, me gustaría más información sobre sus servicios."; // Mensaje predefinido (opcional)
+  const message = "Hola, me gustaría más información sobre sus servicios.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
 
   return (
-    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-      <button
-        style={{
-          padding: "10px 20px",
-          backgroundColor: "#25D366",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-        }}
-      >
-        Contactar por WhatsApp
-      </button>
-    </a>
+    <div className="whatsApp-btn">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+        <FaWhatsapp size={36} color='#ababab' />
+      </a>
+    </div>
   );
 };
 

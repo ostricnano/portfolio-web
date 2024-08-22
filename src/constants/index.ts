@@ -101,6 +101,15 @@ export const projects = [
     url: 'https://car-show-case-nextjs-xi.vercel.app/',
     repoLink: 'https://github.com/ostricnano/car_show_case_nextjs',
   },
+  {
+    id: 9,
+    name: 'To Do Vitest',
+    description: 'A simple application to manage your tasks',
+    stack: [ 'react.js', 'Vitest', 'React testing library', 'Vercel deploy'],
+    image:'./images/mountain.jpg',
+    url: 'https://todo-vitest-l25r-imq59pb4c-ostricnanos-projects.vercel.app/',
+    repoLink: 'https://github.com/ostricnano/todo-vitest',
+  },
 ]
 /* SERVICES */
 export const services = [

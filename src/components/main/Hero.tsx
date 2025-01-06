@@ -5,6 +5,7 @@ import { IoLogoGithub } from "react-icons/io5";
 import './Hero.css'
 import { About } from '../about/About';
 import useInView from '../../hooks/useInView';
+import { logEvent } from '../../analytics';
 
 const socials = [
   {
@@ -43,7 +44,7 @@ export const Hero = () => {
             I specialize in building dynamic and responsive web and mobile applications using React.js and React Native. My focus is on creating visually appealing and highly functional user interfaces that provide a seamless experience across all devices.
           </p>
           <div className='btn-container'>
-            <Button className='ps-5 pe-5' variant="outline-secondary ">
+            <Button className='ps-5 pe-5' variant="outline-secondary " onClick={() => logEvent("Botón", "Clic en contact", "Prueba", 1)}>
               <a href='#contact-me'>Contact me</a>
             </Button>
             <Button className='ps-5 pe-5'  variant="outline-secondary">

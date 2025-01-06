@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import './Header.css';
+import { logEvent } from '../../analytics';
 
 export const Header = () => {
   return (
@@ -16,7 +17,7 @@ export const Header = () => {
               <Nav.Link href="#skills">Skills</Nav.Link>
               <Nav.Link href="#post">Post</Nav.Link>
               <Nav.Link href="#expirience">Expirience</Nav.Link>
-              <Nav.Link href="#contact-me">Contact</Nav.Link>
+              <Nav.Link href="#contact-me" onClick={() => logEvent("Botón", "Clic en contact", "Prueba", 1)}>Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

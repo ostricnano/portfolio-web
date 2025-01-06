@@ -8,6 +8,8 @@ import { motion, useScroll, useSpring } from "framer-motion"
 import { Services } from './components/our-services/Services';
 import { Footer } from './components/footer/Footer';
 import './App.css'
+import { useEffect } from 'react';
+import { initGA, logPageView } from './analytics';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -16,6 +18,11 @@ function App() {
     damping: 30,
     restDelta: 0.001
   });
+
+  useEffect(() => {
+    initGA();
+    logPageView(window.location.pathname); // Registra la vista de la página inicial
+  }, []);
   return (
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
